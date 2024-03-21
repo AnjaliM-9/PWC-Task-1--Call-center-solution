@@ -7,8 +7,8 @@ Possible KPI’S required :
 - Average speed of answer
 - Agent’s performance quadrant -> average handle time (talk duration) vs calls answered
 ## Datasource and Preparation
-Data set for this task was provided by PWC, Churn Dataset. 
--The dataset contained  rows and columns.
+Data set for this task was provided by PWC, Call center Dataset. [01 Call-Center-Dataset.xlsx](https://github.com/AnjaliM-9/PWC-Task-1--Call-center-solution/files/14696709/01.Call-Center-Dataset.xlsx)
+-The dataset contained  5002 rows and 10 columns.
 - Applied Format as table in excel sheet
 Steps performed for Data transformation in Power Query after the dataset loaded into Microsoft Power BI Desktop for modelling:
 - Each of the columns in the table were validated to have the correct data type
@@ -22,7 +22,6 @@ It is a flat file schema
 Following are the measures created: -
 -  ```Overall customer satisfaction  = AVERAGEX(Call_center,Call_center[Satisfaction rating])```
 - ```abandoned %  = DIVIDE([Not Answered calls],COUNT(Call_center[Call Id]),0)```
-- ``` Calls by time = 
 - ```Average speed of answer = AVERAGEX(Call_center,Call_center[Speed of answer in seconds])```
 - ```Answered calls = COUNTROWS(FILTER(Call_center,Call_center[Answered (Y/N)]="Y"))```
 - ``` Non blank ratings count = COUNTA(Call_center[Satisfaction rating])```
